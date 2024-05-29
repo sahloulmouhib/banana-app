@@ -5,7 +5,8 @@ module.exports = {
     'plugin:sonarjs/recommended',
     'plugin:react-hooks/recommended',
     'eslint:recommended',
-    'plugin:react/recommended'
+    'plugin:react/recommended',
+    'love'
   ],
   plugins: ['@typescript-eslint', 'sonarjs', 'react-hooks', 'react'],
   parser: '@typescript-eslint/parser',
@@ -20,10 +21,20 @@ module.exports = {
       'error',
       { propTypeNames: ['bool', 'mutuallyExclusiveTrueProps'] }
     ],
-    'react/destructuring-assignment': 'error'
+    'react/destructuring-assignment': 'error',
+    '@typescript-eslint/semi': 'off',
+    '@typescript-eslint/member-delimiter-style': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/indent': 'off',
+    '@typescript-eslint/space-before-function-paren': 'off'
   },
   env: {
     'jest/globals': true,
     node: true
-  }
+  },
+  overrides: [
+    {
+      files: ['*.js', '*.ts']
+    }
+  ]
 };

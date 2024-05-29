@@ -4,7 +4,7 @@ import i18n from 'i18next';
 
 import en, { type TranslationsType } from './languages/en';
 
-i18n.use(initReactI18next).init({
+void i18n.use(initReactI18next).init({
   compatibilityJSON: 'v3',
   resources: {
     en: {
