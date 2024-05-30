@@ -10,10 +10,14 @@ export default StyleSheet.create({
     justifyContent: 'center',
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: colors.BLACK,
-    borderRadius: spacing.S
+    borderRadius: spacing.S,
+    alignItems: 'center',
+    width: '100%',
+    flex: 1
   },
   textInput: {
+    color: colors.BLACK,
     fontSize: fontSize.M,
-    color: colors.BLACK
+    flex: 1
   }
 });

@@ -2,5 +2,9 @@ export const colors = {
   PRIMARY: '#3887BE',
   BLACK: '#000000',
   WHITE: '#FFFFFF',
-  GREY_LIGHT: '#B2B2B2'
+  GREY_LIGHT: '#B2B2B2',
+  SUCCESS: '#0D8540',
+  SUCCESS_LIGHT: '#EBFBF1',
+  ERROR: '#CC293F',
+  ERROR_LIGHT: '#FDEBED'
 };

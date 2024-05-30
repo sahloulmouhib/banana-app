@@ -1,32 +1,35 @@
 import React from 'react';
 import { View, TextInput } from 'react-native';
 
+import { AntDesign } from '@expo/vector-icons';
+
 import { colors } from 'utils/colors';
 
-import styles from './customTextInput.styles';
+import styles from './customSearchBar.styles';
 
-interface CustomTextInputProps {
+interface CustomSearchBarProps {
   text: string;
   onChangeText: (text: string) => void;
   placeholder?: string;
 }
 
-const CustomTextInput: React.FC<CustomTextInputProps> = ({
+const CustomSearchBar: React.FC<CustomSearchBarProps> = ({
   onChangeText,
   placeholder,
   text
 }) => {
   return (
     <View style={styles.container}>
+      <AntDesign name={'search1'} size={24} color="black" />
       <TextInput
-        placeholderTextColor={colors.GREY_LIGHT}
+        style={styles.textInput}
         value={text}
         onChangeText={onChangeText}
         placeholder={placeholder}
-        style={styles.textInput}
+        cursorColor={colors.PRIMARY}
       />
     </View>
   );
 };
 
-export default CustomTextInput;
+export default CustomSearchBar;
