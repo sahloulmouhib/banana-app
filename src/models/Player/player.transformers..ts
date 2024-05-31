@@ -4,7 +4,8 @@ export const decodePlayer = (response: PlayerResponse): Player => {
   return {
     id: response.uid,
     name: response.name,
-    nbrOfBananas: response.bananas
+    nbrOfBananas: response.bananas,
+    rank: 0
   };
 };
 
@@ -16,6 +17,11 @@ export const decodePlayers = (
   playersResponse.forEach(
     (item) => item.name !== '' && players.push(decodePlayer(item))
   );
-  players.sort((a, b) => b.nbrOfBananas - a.nbrOfBananas);
+  players
+    .sort((a, b) => b.nbrOfBananas - a.nbrOfBananas)
+    .map((player, index) => {
+      player.rank = index + 1;
+      return player;
+    });
   return players;
 };

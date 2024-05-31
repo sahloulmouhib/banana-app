@@ -3,7 +3,8 @@ import {
   Image,
   type ImageSourcePropType,
   Text,
-  TouchableOpacity
+  TouchableOpacity,
+  type DimensionValue
 } from 'react-native';
 
 import styles from './customButton.styles';
@@ -12,15 +13,17 @@ interface CustomButtonProps {
   title: string;
   onPress: () => void;
   rightIcon?: ImageSourcePropType;
+  width?: DimensionValue;
 }
 
 const CustomButton: React.FC<CustomButtonProps> = ({
   title,
   onPress,
-  rightIcon
+  rightIcon,
+  width = '100%'
 }) => {
   return (
-    <TouchableOpacity style={styles.container} onPress={onPress}>
+    <TouchableOpacity style={[styles.container, { width }]} onPress={onPress}>
       <Text style={styles.titleText}>{title}</Text>
       <Image style={styles.icon} source={rightIcon} />
     </TouchableOpacity>

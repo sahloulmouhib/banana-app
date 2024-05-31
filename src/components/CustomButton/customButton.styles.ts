@@ -1,9 +1,8 @@
 import { StyleSheet } from 'react-native';
 
 import { colors } from 'utils/colors';
-import { spacing } from 'utils/constants';
+import { fontSize, spacing } from 'utils/constants';
 
-// TODO: refactor styles
 export default StyleSheet.create({
   container: {
     padding: spacing.M,
@@ -11,11 +10,13 @@ export default StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: colors.PRIMARY,
     borderRadius: spacing.S,
-    flexDirection: 'row'
+    flexDirection: 'row',
+    alignItems: 'center'
   },
   titleText: {
     flex: 1,
-    fontSize: 20,
+    fontSize: fontSize.L,
+    textAlign: 'center',
     color: colors.WHITE
   },
   icon: {

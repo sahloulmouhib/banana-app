@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 
 import { colors } from 'utils/colors';
-import { spacing } from 'utils/constants';
+import { fontSize, spacing } from 'utils/constants';
 
 // TODO: refactor styles
 
@@ -12,7 +12,7 @@ export const styles = StyleSheet.create({
   },
   text1: {
     fontWeight: 'bold',
-    fontSize: 16,
+    fontSize: fontSize.L,
     textAlign: 'left'
   },
   textsContainer: {
@@ -20,12 +20,12 @@ export const styles = StyleSheet.create({
     flex: 1
   },
   text2: {
-    fontSize: 14,
+    fontSize: fontSize.M,
     textAlign: 'left'
   },
   toast: {
-    padding: 16,
-    borderRadius: 8,
+    padding: spacing.M,
+    borderRadius: spacing.S,
     alignItems: 'center',
     justifyContent: 'center',
     gap: spacing.S,
