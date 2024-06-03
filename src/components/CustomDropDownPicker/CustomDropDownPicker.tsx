@@ -16,6 +16,7 @@ interface CustomDropDownPickerProps {
   items: Array<DropDownItem<any>>;
   placeholder?: string;
   width?: DimensionValue;
+  onChangeValue?: (value: any) => void;
 }
 
 const CustomDropDownPicker: React.FC<CustomDropDownPickerProps> = ({
@@ -23,7 +24,8 @@ const CustomDropDownPicker: React.FC<CustomDropDownPickerProps> = ({
   width,
   placeholder,
   value,
-  setValue
+  setValue,
+  onChangeValue
 }: CustomDropDownPickerProps) => {
   const [open, setOpen] = useState(false);
 
@@ -45,6 +47,7 @@ const CustomDropDownPicker: React.FC<CustomDropDownPickerProps> = ({
       items={dropDownItems}
       setOpen={setOpen}
       setValue={setValue}
+      onChangeValue={onChangeValue}
       setItems={setDropDownItems}
     />
   );
