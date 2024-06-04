@@ -10,12 +10,14 @@ interface CustomTableProps {
   rowsHeader: string[];
   rowsData: string[][];
   highlightedRowIndex?: number;
+  tableRef?: React.RefObject<FlatList> | null;
 }
 
 const CustomTable: React.FC<CustomTableProps> = ({
   rowsData,
   rowsHeader,
-  highlightedRowIndex
+  highlightedRowIndex,
+  tableRef
 }) => {
   const rows = rowsHeader ? [rowsHeader, ...rowsData] : rowsData;
   const getIsHighlighted = (index: number) =>
@@ -24,6 +26,7 @@ const CustomTable: React.FC<CustomTableProps> = ({
   if (rowsData.length > 0) {
     return (
       <FlatList
+        ref={tableRef}
         style={styles.flatList}
         data={rows}
         showsVerticalScrollIndicator={false}

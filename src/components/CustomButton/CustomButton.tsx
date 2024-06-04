@@ -7,6 +7,8 @@ import {
   type DimensionValue
 } from 'react-native';
 
+import { colors } from 'utils/colors';
+
 import styles from './customButton.styles';
 
 interface CustomButtonProps {
@@ -14,16 +16,29 @@ interface CustomButtonProps {
   onPress: () => void;
   rightIcon?: ImageSourcePropType;
   width?: DimensionValue;
+  isDisabled?: boolean;
 }
 
 const CustomButton: React.FC<CustomButtonProps> = ({
   title,
   onPress,
   rightIcon,
-  width = '100%'
+  width = '100%',
+  isDisabled
 }) => {
+  const containerDisabledStyle = isDisabled
+    ? {
+        backgroundColor: colors.GREY_LIGHT,
+        opacity: 0.5
+      }
+    : {
+        backgroundColor: colors.PRIMARY
+      };
+
   return (
-    <TouchableOpacity style={[styles.container, { width }]} onPress={onPress}>
+    <TouchableOpacity
+      style={[styles.container, containerDisabledStyle, { width }]}
+      onPress={onPress}>
       <Text style={styles.titleText}>{title}</Text>
       <Image style={styles.icon} source={rightIcon} />
     </TouchableOpacity>

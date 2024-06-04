@@ -39,7 +39,6 @@ const leaderBoardReducer = (
         searchText: action.payload
       };
     case LeaderBoardActionTypeEnum.SetDropDownValue:
-      console.log('action.payload', action.payload);
       return {
         ...state,
         dropDownValue: action.payload

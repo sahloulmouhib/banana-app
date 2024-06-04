@@ -11,17 +11,20 @@ interface CustomSearchBarProps {
   text: string;
   onChangeText: (text: string) => void;
   placeholder?: string;
+  inputRef?: React.RefObject<TextInput> | null;
 }
 
 const CustomSearchBar: React.FC<CustomSearchBarProps> = ({
   onChangeText,
   placeholder,
-  text
+  text,
+  inputRef
 }) => {
   return (
     <View style={styles.container}>
       <AntDesign name={'search1'} size={24} color="black" />
       <TextInput
+        ref={inputRef}
         style={styles.textInput}
         value={text}
         onChangeText={onChangeText}

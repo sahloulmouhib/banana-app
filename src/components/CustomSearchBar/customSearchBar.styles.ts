@@ -17,6 +17,7 @@ export default StyleSheet.create({
   },
   textInput: {
     color: colors.BLACK,
-    fontSize: fontSize.M
+    fontSize: fontSize.M,
+    flex: 1
   }
 });

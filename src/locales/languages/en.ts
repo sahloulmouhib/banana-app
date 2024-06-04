@@ -1,7 +1,6 @@
 export const en = {
   global: {
     no_data: 'No data found...',
-    search: 'Search...',
     try_again: 'Try again'
   },
   error: {
@@ -17,7 +16,9 @@ export const en = {
       title: 'Player not found',
       description:
         'This user name does not exist! Please specify an existing user name!'
-    }
+    },
+    search_player: 'Search player...',
+    search: 'Search'
   }
 };
 

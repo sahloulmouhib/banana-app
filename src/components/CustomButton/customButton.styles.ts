@@ -8,7 +8,6 @@ export default StyleSheet.create({
     padding: spacing.M,
     gap: spacing.S,
     justifyContent: 'center',
-    backgroundColor: colors.PRIMARY,
     borderRadius: spacing.S,
     flexDirection: 'row',
     alignItems: 'center'
@@ -17,7 +16,8 @@ export default StyleSheet.create({
     flex: 1,
     fontSize: fontSize.L,
     textAlign: 'center',
-    color: colors.WHITE
+    color: colors.WHITE,
+    fontWeight: 'bold'
   },
   icon: {
     tintColor: colors.WHITE
