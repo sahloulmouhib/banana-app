@@ -1,10 +1,9 @@
 import React, { useRef } from 'react';
 import {
-  SafeAreaView,
-  StyleSheet,
-  type TextInput,
   View,
-  type FlatList
+  type FlatList,
+  SafeAreaView,
+  type TextInput
 } from 'react-native';
 
 import CustomButton from 'components/CustomButton/CustomButton';
@@ -13,22 +12,22 @@ import CustomSearchBar from 'components/CustomSearchBar/CustomSearchBar';
 import CustomTable from 'components/CustomTable/CustomTable';
 import { translate } from 'locales/i18n';
 import {
+  setSearchText,
   createTopRankPlayersTable,
-  handleDropDownValue,
   setDropDownValue,
-  setSearchText
+  handleDropDownValue
 } from 'store/actions/leaderBoard.actions';
-import { useAppDispatch, useAppSelector } from 'store/store.hooks';
-import { colors } from 'utils/colors';
+import { useAppSelector, useAppDispatch } from 'store/store.hooks';
 import {
   LEADER_BOARD_DROPDOWN_ITEMS,
-  LEADER_BOARD_ROWS_HEADER,
-  spacing
+  LEADER_BOARD_ROWS_HEADER
 } from 'utils/constants';
 import { LeaderBoarOptionsEnum } from 'utils/enums';
 import { type DropDownItem } from 'utils/types';
 
-export default function Layout() {
+import styles from './leaderBoardScreen.styles';
+
+const LeaderBoardScreen: React.FC = () => {
   const inputRef = useRef<TextInput | null>(null);
   const blurInput = () => {
     if (inputRef.current) {
@@ -107,22 +106,6 @@ export default function Layout() {
       </View>
     </SafeAreaView>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  safeArea: {
-    flex: 1
-  },
-  container: {
-    padding: spacing.M,
-    gap: spacing.M,
-    flex: 1,
-    backgroundColor: colors.WHITE,
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-  searchContainer: {
-    flexDirection: 'row',
-    gap: spacing.M
-  }
-});
+export default LeaderBoardScreen;

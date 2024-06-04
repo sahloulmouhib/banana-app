@@ -3,14 +3,13 @@ import Toast from 'react-native-toast-message';
 import { Provider } from 'react-redux';
 
 import { toastConfig } from 'customToastConfig/toastConfig';
+import LeaderBoardScreen from 'screens/LeaderBoardScreen/LeaderBoardScreen';
 import store from 'store/store';
-
-import Layout from './Layout';
 
 export default function App() {
   return (
     <Provider store={store}>
-      <Layout />
+      <LeaderBoardScreen />
       <Toast position="top" config={toastConfig} />
     </Provider>
   );
