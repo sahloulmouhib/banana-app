@@ -1,23 +1,23 @@
-import { LeaderBoarOptionsEnum } from 'utils/enums';
+import { type LeaderBoarOptionsEnum } from 'utils/enums';
 
 import { LeaderBoardActionTypeEnum } from '../actionTypes/leaderBoard.actionTypes';
 
 export interface SetSearchTextAction {
-  type: typeof LeaderBoardActionTypeEnum.SetSearchText;
+  type: LeaderBoardActionTypeEnum.SetSearchText;
   payload: string;
 }
 
 export interface SetDropDownValueAction {
-  type: typeof LeaderBoardActionTypeEnum.SetDropDownValue;
+  type: LeaderBoardActionTypeEnum.SetDropDownValue;
   payload: LeaderBoarOptionsEnum;
 }
 
 export interface CreateTopRankPlayersTableAction {
-  type: typeof LeaderBoardActionTypeEnum.CreateTopRankPlayersTable;
+  type: LeaderBoardActionTypeEnum.CreateTopRankPlayersTable;
 }
 
 export interface HandleDropDownValueAction {
-  type: typeof LeaderBoardActionTypeEnum.HandleDropDownValue;
+  type: LeaderBoardActionTypeEnum.HandleDropDownValue;
   payload: LeaderBoarOptionsEnum;
 }
 

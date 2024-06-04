@@ -3,7 +3,10 @@ import Toast from 'react-native-toast-message';
 import { ToastEnum } from 'customToastConfig/toastConfig';
 import { translate } from 'locales/i18n';
 import { LeaderBoardActionTypeEnum } from 'store/actionTypes/leaderBoard.actionTypes';
-import { type LeaderBoardActionsType } from 'store/actions/leaderBoard.actions';
+import {
+  type HandleDropDownValueAction,
+  type LeaderBoardActionsType
+} from 'store/actions/leaderBoard.actions';
 import { LeaderBoarOptionsEnum } from 'utils/enums';
 import {
   LEADER_BOARD_TABLE_SORTED_BY_LOWEST_RANK,
@@ -44,7 +47,6 @@ const leaderBoardReducer = (
     case LeaderBoardActionTypeEnum.CreateTopRankPlayersTable: {
       const { rowsData: createdRowsData, searchedPlayerIndex } =
         createLeaderBoardTable(state.searchText);
-
       if (searchedPlayerIndex === undefined && state.searchText) {
         Toast.show({
           type: ToastEnum.Error,
@@ -59,29 +61,36 @@ const leaderBoardReducer = (
       };
     }
     case LeaderBoardActionTypeEnum.HandleDropDownValue: {
-      switch (action.payload) {
-        case LeaderBoarOptionsEnum.SearchTopRank:
-          return state;
-        case LeaderBoarOptionsEnum.SortByName:
-          return {
-            ...state,
-            rowsData: LEADER_BOARD_TABLE_SORTED_BY_NAME,
-            highlightedRowIndex: undefined,
-            searchText: ''
-          };
-        case LeaderBoarOptionsEnum.SortByLowestRank:
-          return {
-            ...state,
-            rowsData: LEADER_BOARD_TABLE_SORTED_BY_LOWEST_RANK,
-            highlightedRowIndex: undefined,
-            searchText: ''
-          };
-        default:
-          return state;
-      }
+      return handleDropDownValueByType(state, action);
     }
     default:
       return state;
   }
 };
 export default leaderBoardReducer;
+
+const handleDropDownValueByType = (
+  state: LeaderBoardState,
+  action: HandleDropDownValueAction
+): LeaderBoardState => {
+  switch (action.payload) {
+    case LeaderBoarOptionsEnum.SearchTopRank:
+      return state;
+    case LeaderBoarOptionsEnum.SortByName:
+      return {
+        ...state,
+        rowsData: LEADER_BOARD_TABLE_SORTED_BY_NAME,
+        highlightedRowIndex: undefined,
+        searchText: ''
+      };
+    case LeaderBoarOptionsEnum.SortByLowestRank:
+      return {
+        ...state,
+        rowsData: LEADER_BOARD_TABLE_SORTED_BY_LOWEST_RANK,
+        highlightedRowIndex: undefined,
+        searchText: ''
+      };
+    default:
+      return state;
+  }
+};
