@@ -3,20 +3,14 @@ import { StyleSheet } from 'react-native';
 import { colors } from 'utils/colors';
 import { fontSize, spacing } from 'utils/constants';
 
-// TODO: refactor styles
-
 export const styles = StyleSheet.create({
-  icon: {
-    width: 26,
-    height: 26
-  },
   text1: {
     fontWeight: 'bold',
     fontSize: fontSize.L,
     textAlign: 'left'
   },
   textsContainer: {
-    gap: 8,
+    gap: spacing.S,
     flex: 1
   },
   text2: {

@@ -1,9 +1,7 @@
 import { StyleSheet } from 'react-native';
 
 import { colors } from 'utils/colors';
-import { spacing } from 'utils/constants';
-
-// TODO: refactor styles
+import { fontSize, spacing } from 'utils/constants';
 
 export default StyleSheet.create({
   container: {
@@ -21,7 +19,7 @@ export default StyleSheet.create({
     padding: spacing.S,
     flex: 1,
     textAlign: 'center',
-    fontSize: 20
+    fontSize: fontSize.L
   },
   separator: {
     height: '100%',

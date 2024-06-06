@@ -94,7 +94,6 @@ const LeaderBoardScreen: React.FC = () => {
           setValue={changeDropDownValue}
           items={dropDownItems}
           onChangeValue={onChangeDropDownValue}
-          placeholder="Select"
           onPress={blurInput}
         />
         <CustomTable

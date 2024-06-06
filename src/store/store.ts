@@ -1,6 +1,6 @@
 import { createStore, combineReducers } from 'redux';
 
-import leaderBoardReducer from './reducers/leaderBoard.reducer';
+import leaderBoardReducer from './reducers/leaderBoardReducer/leaderBoard.reducer';
 
 const rootReducer = combineReducers({
   leaderBoard: leaderBoardReducer

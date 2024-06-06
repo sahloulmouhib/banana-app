@@ -7,6 +7,7 @@ import {
   type HandleDropDownValueAction,
   type LeaderBoardActionsType
 } from 'store/actions/leaderBoard.actions';
+import { LEADER_BOARD_DROPDOWN_ITEMS } from 'utils/constants';
 import { LeaderBoarOptionsEnum } from 'utils/enums';
 import {
   LEADER_BOARD_TABLE_SORTED_BY_LOWEST_RANK,
@@ -21,12 +22,12 @@ export interface LeaderBoardState {
   dropDownValue: LeaderBoarOptionsEnum;
 }
 
-const initialLeaderBoardState: LeaderBoardState = {
+export const initialLeaderBoardState: LeaderBoardState = {
   searchText: '',
   rowsData: [],
   highlightedRowIndex: undefined,
-  // TODO: Fix the type of dropDownValue
-  dropDownValue: LeaderBoarOptionsEnum.SearchTopRank
+  dropDownValue: LEADER_BOARD_DROPDOWN_ITEMS[0]
+    .value as LeaderBoarOptionsEnum.SearchTopRank
 };
 const leaderBoardReducer = (
   state: LeaderBoardState = initialLeaderBoardState,
@@ -68,7 +69,7 @@ const leaderBoardReducer = (
 };
 export default leaderBoardReducer;
 
-const handleDropDownValueByType = (
+export const handleDropDownValueByType = (
   state: LeaderBoardState,
   action: HandleDropDownValueAction
 ): LeaderBoardState => {

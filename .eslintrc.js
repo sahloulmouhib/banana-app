@@ -39,5 +39,6 @@ module.exports = {
     {
       files: ['*.js', '*.ts']
     }
-  ]
+  ],
+  ignorePatterns: ['node_modules', 'jest.config.js', 'metro.config.js']
 };
