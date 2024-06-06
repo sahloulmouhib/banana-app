@@ -8,7 +8,7 @@ export default StyleSheet.create({
     flexDirection: 'row',
     borderWidth: 1,
     width: '100%',
-    borderColor: colors.BLACK
+    borderColor: colors.GREY_LIGHT
   },
   nameContainer: {
     flex: 1,
@@ -24,6 +24,6 @@ export default StyleSheet.create({
   separator: {
     height: '100%',
     width: 1,
-    backgroundColor: colors.BLACK
+    backgroundColor: colors.GREY_LIGHT
   }
 });

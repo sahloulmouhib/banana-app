@@ -1,6 +1,7 @@
 import { StyleSheet } from 'react-native';
 
-import { fontSize } from 'utils/constants';
+import { colors } from 'utils/colors';
+import { fontSize, spacing } from 'utils/constants';
 
 export default StyleSheet.create({
   flatList: {
@@ -11,11 +12,15 @@ export default StyleSheet.create({
     flex: 1,
     width: '100%',
     borderWidth: 1,
+    borderColor: colors.GREY_LIGHT,
+    borderBottomLeftRadius: spacing.M,
+    borderBottomRightRadius: spacing.M,
     borderTopWidth: 0,
     justifyContent: 'center',
     alignItems: 'center'
   },
   noDataText: {
-    fontSize: fontSize.L
+    fontSize: fontSize.L,
+    color: colors.GREY
   }
 });

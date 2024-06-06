@@ -1,6 +1,6 @@
 export const en = {
   global: {
-    no_data: 'No data found...',
+    no_data: 'Player not found, Try again!',
     try_again: 'Try again'
   },
   error: {

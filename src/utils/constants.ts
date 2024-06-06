@@ -15,13 +15,16 @@ export const LEADER_BOARD_ROWS_HEADER = [
   translate('leader_board.rows_header.three')
 ];
 export const spacing = {
-  L: 32,
-  M: 16,
+  XL: 32,
+  L: 16,
+  M: 12,
   S: 8,
-  XS: 4
+  XS: 4,
+  XXS: 2
 };
 
 export const fontSize = {
+  XL: 24,
   L: 20,
   M: 16,
   S: 14,
@@ -38,3 +41,5 @@ export const LEADER_BOARD_DROPDOWN_ITEMS: Array<
     value: LeaderBoarOptionsEnum.SortByLowestRank
   }
 ];
+
+export const SCROLL_TO_TOP_THRESHOLD = 150;

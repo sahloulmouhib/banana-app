@@ -7,9 +7,13 @@ export default StyleSheet.create({
   safeArea: {
     flex: 1
   },
+  dividerContainer: {
+    gap: spacing.L,
+    width: '100%',
+    zIndex: 1
+  },
   container: {
     padding: spacing.M,
-    gap: spacing.M,
     flex: 1,
     backgroundColor: colors.WHITE,
     alignItems: 'center',
@@ -17,6 +21,9 @@ export default StyleSheet.create({
   },
   searchContainer: {
     flexDirection: 'row',
-    gap: spacing.M
+    gap: spacing.L
+  },
+  tableContentContainer: {
+    marginVertical: spacing.L
   }
 });

@@ -6,13 +6,13 @@ import { IS_IOS, fontSize, spacing } from 'utils/constants';
 export default StyleSheet.create({
   container: {
     paddingHorizontal: spacing.M,
-    paddingVertical: IS_IOS ? spacing.M : 0,
+    paddingVertical: IS_IOS ? spacing.L : 0,
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: colors.BLACK,
-    borderRadius: spacing.S,
+    borderRadius: spacing.M,
     flexDirection: 'row',
     flex: 1,
-    gap: spacing.M,
+    gap: spacing.L,
     alignItems: 'center'
   },
   textInput: {

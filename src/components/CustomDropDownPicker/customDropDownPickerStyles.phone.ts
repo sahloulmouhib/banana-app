@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 
 import { colors } from 'utils/colors';
-import { fontSize } from 'utils/constants';
+import { fontSize, spacing } from 'utils/constants';
 
 export default StyleSheet.create({
   arrowIcon: {
@@ -10,11 +10,12 @@ export default StyleSheet.create({
   dropDownPicker: {
     borderWidth: 1,
     borderColor: colors.GREY_LIGHT,
+    borderRadius: spacing.M,
     zIndex: 1000
   },
   label: {
     color: colors.BLACK,
-    fontSize: fontSize.S
+    fontSize: fontSize.M
   },
   tickIcon: {
     tintColor: colors.PRIMARY
