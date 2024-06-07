@@ -19,7 +19,7 @@ export default StyleSheet.create({
     padding: spacing.S,
     flex: 1,
     textAlign: 'center',
-    fontSize: fontSize.L
+    fontSize: fontSize.M
   },
   separator: {
     height: '100%',

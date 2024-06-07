@@ -18,7 +18,8 @@ import {
 import { useAppSelector, useAppDispatch } from 'store/store.hooks';
 import {
   LEADER_BOARD_DROPDOWN_ITEMS,
-  LEADER_BOARD_ROWS_HEADER
+  LEADER_BOARD_ROWS_HEADER,
+  SEARCH_BUTTON_WIDTH
 } from 'utils/constants';
 import { LeaderBoarOptionsEnum } from 'utils/enums';
 import { type DropDownItem } from 'utils/types';
@@ -80,8 +81,7 @@ const LeaderBoardScreen: React.FC = () => {
               />
               <CustomButton
                 isDisabled={iSearchButtonDisabled}
-                // TODO: Add width prop
-                width={120}
+                width={SEARCH_BUTTON_WIDTH}
                 title={translate('leader_board.search')}
                 onPress={onSubmitSearch}
               />

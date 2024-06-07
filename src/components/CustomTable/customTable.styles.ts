@@ -17,10 +17,16 @@ export default StyleSheet.create({
     borderBottomRightRadius: spacing.M,
     borderTopWidth: 0,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    gap: spacing.L
   },
   noDataText: {
-    fontSize: fontSize.L,
+    fontSize: fontSize.M,
     color: colors.GREY
+  },
+  noDataImage: {
+    tintColor: colors.GREY,
+    width: 70,
+    height: 70
   }
 });

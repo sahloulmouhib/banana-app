@@ -7,6 +7,7 @@ export const en = {
     something_went_wrong: 'Try again, something went wrong'
   },
   leader_board: {
+    title: 'Banana Leaderboard',
     rows_header: {
       one: 'Name',
       two: 'Rank',

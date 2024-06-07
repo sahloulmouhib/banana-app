@@ -3,12 +3,14 @@ import {
   FlatList,
   View,
   Text,
+  Image,
   type ListRenderItemInfo,
   type NativeScrollEvent,
   type NativeSyntheticEvent
 } from 'react-native';
 
 import { translate } from 'locales/i18n';
+import { images } from 'utils/images';
 
 import CustomTableRow from '../CustomTableRow/CustomTableRow';
 
@@ -72,6 +74,7 @@ const CustomTable: React.FC<CustomTableProps> = ({
         isIndexEven={true}
       />
       <View style={styles.noDataContainer}>
+        <Image source={images.EMPTY_LIST} style={styles.noDataImage} />
         <Text style={styles.noDataText}>{translate('global.no_data')}</Text>
       </View>
     </View>

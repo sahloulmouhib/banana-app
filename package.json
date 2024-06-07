@@ -9,7 +9,7 @@
     "web": "expo start --web",
     "lint": "eslint .",
     "c": "yarn lint && yarn tsc --skipLibCheck",
-    "t": "jest --watchAll"
+    "test": "jest --watchAll"
   },
   "dependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",

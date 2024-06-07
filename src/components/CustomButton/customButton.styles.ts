@@ -14,7 +14,7 @@ export default StyleSheet.create({
   },
   titleText: {
     flex: 1,
-    fontSize: fontSize.L,
+    fontSize: fontSize.M,
     textAlign: 'center',
     color: colors.WHITE,
     fontWeight: 'bold'

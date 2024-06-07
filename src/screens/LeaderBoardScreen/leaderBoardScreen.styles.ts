@@ -5,7 +5,8 @@ import { spacing } from 'utils/constants';
 
 export default StyleSheet.create({
   safeArea: {
-    flex: 1
+    flex: 1,
+    paddingTop: spacing.L
   },
   dividerContainer: {
     gap: spacing.L,
@@ -13,8 +14,8 @@ export default StyleSheet.create({
     zIndex: 1
   },
   container: {
-    padding: spacing.M,
     flex: 1,
+    paddingHorizontal: spacing.L,
     backgroundColor: colors.WHITE,
     alignItems: 'center',
     justifyContent: 'center'
@@ -24,6 +25,7 @@ export default StyleSheet.create({
     gap: spacing.L
   },
   tableContentContainer: {
-    marginVertical: spacing.L
+    marginTop: spacing.L,
+    paddingBottom: spacing.XL
   }
 });

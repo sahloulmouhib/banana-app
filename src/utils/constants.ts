@@ -42,4 +42,6 @@ export const LEADER_BOARD_DROPDOWN_ITEMS: Array<
   }
 ];
 
-export const SCROLL_TO_TOP_THRESHOLD = 150;
+export const SCROLL_TO_TOP_THRESHOLD = 250;
+
+export const SEARCH_BUTTON_WIDTH = 120;
