@@ -8,9 +8,10 @@ export default StyleSheet.create({
     flexDirection: 'row',
     width: '100%',
     gap: spacing.S,
-    padding: spacing.L,
+    paddingVertical: spacing.L,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    flexWrap: 'wrap'
   },
   image: {
     width: 60,

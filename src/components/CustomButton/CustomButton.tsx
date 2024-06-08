@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 
 import { colors } from 'utils/colors';
+import { DISABLED_OPACITY } from 'utils/constants';
 
 import styles from './customButton.styles';
 
@@ -29,7 +30,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
   const containerDisabledStyle = isDisabled
     ? {
         backgroundColor: colors.GREY_LIGHT,
-        opacity: 0.5
+        opacity: DISABLED_OPACITY
       }
     : {
         backgroundColor: colors.PRIMARY

@@ -45,3 +45,5 @@ export const LEADER_BOARD_DROPDOWN_ITEMS: Array<
 export const SCROLL_TO_TOP_THRESHOLD = 250;
 
 export const SEARCH_BUTTON_WIDTH = 120;
+
+export const DISABLED_OPACITY = 0.5;
